@@ -6,14 +6,14 @@ on:
     - cron: 0 18 * * *
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-24.10
-  CONFIG_FILE: configs/mt798x.config
+  REPO_URL: https://github.com/HUANGJHON/openwrt.git
+  REPO_BRANCH: 6.12-ramips
+  CONFIG_FILE: configs/mt7621.config
   DIY_SCRIPT: diy/diy-mtk.sh
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: Mediatek_filogic
+  FIRMWARE_TAG: ramips
   TZ: Asia/Shanghai
 
 jobs:
@@ -174,7 +174,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址: 10.0.0.1
+          - 🌐 默认地址: 192.168.2.1
           - 🔑 默认密码: password
           ### 🧊 固件版本
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
