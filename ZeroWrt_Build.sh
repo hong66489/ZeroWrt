@@ -39,7 +39,7 @@ echo -e "${GREEN}更新并安装 feeds...${NC}"
 
 # 修改默认IP
 echo -e "${YELLOW}修改默认IP${NC}"
-sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # profile
 echo -e "${YELLOW}profile${NC}"
