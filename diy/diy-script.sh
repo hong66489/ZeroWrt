@@ -109,7 +109,7 @@ git clone https://git.kejizero.online/zhao/package_kernel_r8125 package/kernel/r
 git clone https://git.kejizero.online/zhao/package_kernel_r8126 package/kernel/r8126
 
 # Adguardhome
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome luci-app-adguardhome
+git clone https://github.com/kenzok78/luci-app-adguardhome package/adguardhome
 
 # iStore
 git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
