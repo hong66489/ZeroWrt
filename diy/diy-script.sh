@@ -68,7 +68,7 @@ sed -i 's/procd_set_param stderr 1/procd_set_param stderr 0/g' feeds/packages/ut
 #curl -L -o target/linux/generic/hack-6.6/312-arm64-cpuinfo-Add-model-name-in-proc-cpuinfo-for-64bit-ta.patch https://raw.githubusercontent.com/oppen321/ZeroWrt/refs/heads/master/PATCH/kernel/arm/312-arm64-cpuinfo-Add-model-name-in-proc-cpuinfo-for-64bit-ta.patch
 
 # 移除要替换的包
-rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box,adguardhome,socat}
+rm -rf feeds/packages/net/{v2ray-geodata,sing-box,adguardhome,socat}
 rm -rf feeds/packages/net/alist feeds/luci/applications/luci-app-alist
 rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/packages/lang/golang
@@ -103,17 +103,17 @@ git clone https://git.kejizero.online/zhao/packages_lang_golang -b 23.x feeds/pa
 # Realtek 网卡 - R8168 & R8125 & R8126 & R8152 & R8101
 #rm -rf package/kernel/r8168 package/kernel/r8101 package/kernel/r8125 package/kernel/r8126
 #git clone https://git.kejizero.online/zhao/package_kernel_r8168 package/kernel/r8168
-git clone https://git.kejizero.online/zhao/package_kernel_r8152 package/kernel/r8152
-git clone https://git.kejizero.online/zhao/package_kernel_r8101 package/kernel/r8101
-git clone https://git.kejizero.online/zhao/package_kernel_r8125 package/kernel/r8125
-git clone https://git.kejizero.online/zhao/package_kernel_r8126 package/kernel/r8126
+#git clone https://git.kejizero.online/zhao/package_kernel_r8152 package/kernel/r8152
+#git clone https://git.kejizero.online/zhao/package_kernel_r8101 package/kernel/r8101
+#git clone https://git.kejizero.online/zhao/package_kernel_r8125 package/kernel/r8125
+#git clone https://git.kejizero.online/zhao/package_kernel_r8126 package/kernel/r8126
 
 # Adguardhome
 git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome luci-app-adguardhome
 
 # iStore
-git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
-git_sparse_clone main https://github.com/linkease/istore luci
+#git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+#git_sparse_clone main https://github.com/linkease/istore luci
 
 # Docker
 rm -rf feeds/luci/applications/luci-app-dockerman
@@ -139,7 +139,7 @@ git clone https://git.kejizero.online/zhao/luci-app-upnp feeds/luci/applications
 git clone --depth=1 https://github.com/oppen321/Zero-package package/Zero-package
 
 # 一键配置拨号
-git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
+#git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
 
 # 修改名称
 sed -i 's/OpenWrt/ZeroWrt/' package/base-files/files/bin/config_generate
@@ -153,31 +153,31 @@ curl -L -o package/luci-theme-argon/luci-theme-argon/htdocs/luci-static/argon/im
 git clone --depth=1 -b main https://github.com/oppen321/default-settings package/default-settings
 
 # Lucky
-git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
+#git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # OpenAppFilter
 git clone https://git.kejizero.online/zhao/OpenAppFilter --depth=1 package/OpenAppFilter
 
 # luci-app-partexp
-git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp package/luci-app-partexp
+#git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp package/luci-app-partexp
 
 # 进阶设置
-git clone https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
+#git clone https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
 
 # luci-app-webdav
-git clone https://git.kejizero.online/zhao/luci-app-webdav package/new/luci-app-webdav
+#git clone https://git.kejizero.online/zhao/luci-app-webdav package/new/luci-app-webdav
 
 # unzip
 rm -rf feeds/packages/utils/unzip
 git clone https://github.com/sbwml/feeds_packages_utils_unzip feeds/packages/utils/unzip
 
 # luci-app-modemband
-git clone https://github.com/4IceG/luci-app-modemband package/luci-app-modemband
+#git clone https://github.com/4IceG/luci-app-modemband package/luci-app-modemband
 
 # frpc名称
-sed -i 's,发送,Transmission,g' feeds/luci/applications/luci-app-transmission/po/zh_Hans/transmission.po
-sed -i 's,frp 服务器,FRP 服务器,g' feeds/luci/applications/luci-app-frps/po/zh_Hans/frps.po
-sed -i 's,frp 客户端,FRP 客户端,g' feeds/luci/applications/luci-app-frpc/po/zh_Hans/frpc.po
+#sed -i 's,发送,Transmission,g' feeds/luci/applications/luci-app-transmission/po/zh_Hans/transmission.po
+#sed -i 's,frp 服务器,FRP 服务器,g' feeds/luci/applications/luci-app-frps/po/zh_Hans/frps.po
+#sed -i 's,frp 客户端,FRP 客户端,g' feeds/luci/applications/luci-app-frpc/po/zh_Hans/frpc.po
 
 # 必要的补丁
 pushd feeds/luci
