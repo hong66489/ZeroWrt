@@ -135,6 +135,10 @@ rm -rf feeds/{packages/net/miniupnpd,luci/applications/luci-app-upnp}
 git clone https://git.kejizero.online/zhao/miniupnpd feeds/packages/net/miniupnpd -b v2.3.7
 git clone https://git.kejizero.online/zhao/luci-app-upnp feeds/luci/applications/luci-app-upnp -b master
 
+# smartdns
+rm -rf feeds/{packages/net/smartdns,luci/applications/luci-app-smartdns}
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages smartdns luci-app-smartdns
+
 # Zero-package
 git clone --depth=1 https://github.com/oppen321/Zero-package package/Zero-package
 
@@ -145,9 +149,9 @@ git clone --depth=1 https://github.com/oppen321/Zero-package package/Zero-packag
 sed -i 's/OpenWrt/ZeroWrt/' package/base-files/files/bin/config_generate
 
 # Theme
-git clone --depth 1 https://github.com/sbwml/luci-theme-argon package/luci-theme-argon
-git clone https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat -b js
-curl -L -o package/luci-theme-argon/luci-theme-argon/htdocs/luci-static/argon/img/bg.webp https://git.kejizero.online/zhao/files/raw/branch/main/%20background/bg.webp
+#git clone --depth 1 https://github.com/sbwml/luci-theme-argon package/luci-theme-argon
+#git clone https://github.com/sirpdboy/luci-theme-kucat package/luci-theme-kucat -b js
+#curl -L -o package/luci-theme-argon/luci-theme-argon/htdocs/luci-static/argon/img/bg.webp https://git.kejizero.online/zhao/files/raw/branch/main/%20background/bg.webp
 
 # default-settings
 git clone --depth=1 -b main https://github.com/oppen321/default-settings package/default-settings
