@@ -93,6 +93,9 @@ git clone https://git.kejizero.online/zhao/packages_lang_golang -b 23.x feeds/pa
 # Alist
 #git clone https://git.kejizero.online/zhao/luci-app-alist package/alist
 
+# natflow
+git clone https://github.com/x-wrt/com.x-wrt.git package/com.x-wrt
+
 # Mosdns
 #git clone https://git.kejizero.online/zhao/luci-app-mosdns.git -b v5 package/mosdns
 #git clone https://git.kejizero.online/zhao/v2ray-geodata.git package/v2ray-geodata
@@ -136,8 +139,8 @@ git clone https://git.kejizero.online/zhao/miniupnpd feeds/packages/net/miniupnp
 git clone https://git.kejizero.online/zhao/luci-app-upnp feeds/luci/applications/luci-app-upnp -b master
 
 # smartdns
-rm -rf feeds/{packages/net/smartdns,luci/applications/luci-app-smartdns}
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages smartdns luci-app-smartdns
+#rm -rf feeds/{packages/net/smartdns,luci/applications/luci-app-smartdns}
+#git_sparse_clone master https://github.com/kenzok8/openwrt-packages smartdns luci-app-smartdns
 
 # Zero-package
 git clone --depth=1 https://github.com/oppen321/Zero-package package/Zero-package
