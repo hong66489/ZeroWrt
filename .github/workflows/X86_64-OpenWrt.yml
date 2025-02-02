@@ -6,7 +6,7 @@ on:
     - cron: 0 19 * * *
 
 env:
-  REPO_URL: https://github.com/hong66489/immortalwrt
+  REPO_URL: https://github.com/HUANGJHON/openwrt
   REPO_BRANCH: openwrt-24.10
   CONFIG_FILE: configs/mt7621.config
   DIY_SCRIPT: diy/diy-script.sh
